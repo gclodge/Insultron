@@ -1,0 +1,6 @@
+2020.04.23.01
+ - (GC) Added all remaining Shakespeare insult parts.
+ - (GC) Added 'changelog.txt' and 'wishlist.txt' along with edits to 'readme.txt'
+
+2020.04.22.01
+ - (GC) Made a readme ferda.

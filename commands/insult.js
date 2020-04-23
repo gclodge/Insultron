@@ -1,4 +1,3 @@
-// at the top of your file
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
@@ -19,7 +18,7 @@ exports.run = (client, message, args) => {
   //< Get the 'joiner' ('a' or 'an' depending on starting character)
   let joiner = getJoiner(starter.word);
 
-  //< TODO :: Generate an embed with the full definitions of each part
+  //< Generate an 'embed' object with all the defintions, etc
   const weddedAndEmbedded = {
   	color: 0x0099ff,
     title: `${message.author.username} hath insulted ${target.user.username}`,

@@ -1,0 +1,9 @@
+This document is intended to serve as a standing 'wishlist' for features to be added.
+
+- (GC) Add argument to '!insult' so users can request certain words be used in the insult if possible
+	.. Thinking like !insult @user <word1> .. <wordN> with a cap at N=3 for now
+
+- (GC) Add function to get each insult component which tracks what the last word used in that place was.
+	.. Want to prevent repetition of a single component in back-to-back insults
+	.. Would need to track (in-memory) what the last word was for each component then loop until we get a different one
+	.. Can store the last used words of each component in the 'Client' object along with words
