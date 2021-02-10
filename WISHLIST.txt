@@ -1,5 +1,12 @@
 This document is intended to serve as a standing 'wishlist' for features to be added.
 
+- (yall) Add automated tracking of movie recommendations (and serialize to disk every N minutes - would track last time written, override on error to serialize first)
+	..	Add movies to map, count numbers of times recommended, number of times watched, last time watched
+		- [DONE @ 2250 2021.02.09] Requires !recommend command to do the Enmap.Ensure (which checks if the key exists, if not it adds a default entry)
+		- Requires !watch|watched <movie ID> to iterate watch count, assign last time watched
+		- First recommend adds to map, successive iterate recommend count
+	.. Want to be able to remove from list (!remove), and view current list (!list) as well.
+
 - (GC) Add argument to '!insult' so users can request certain words be used in the insult if possible
 	.. Thinking like !insult @user <word1> .. <wordN> with a cap at N=3 for now
 
@@ -7,3 +14,9 @@ This document is intended to serve as a standing 'wishlist' for features to be a
 	.. Want to prevent repetition of a single component in back-to-back insults
 	.. Would need to track (in-memory) what the last word was for each component then loop until we get a different one
 	.. Can store the last used words of each component in the 'Client' object along with words
+
+- (GC) Add '!gif' search function which uses the built-in /giphy command
+	.. Hoping to simply get and return a single gif from any text supplied by user and rolling that damn dice
+	.. Maybe include a 'rating' value if you can
+
+- (GC) Add some automated usage of '/tableflip' '/unflip' and '/shrug'

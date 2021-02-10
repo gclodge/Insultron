@@ -9,10 +9,13 @@ const config = require("./config.json");
 //< This is the JSON file that contains all the word definitions
 const words = require("./words.json");
 
+
 //< Assign the config to the client so it remains accessible
 client.config = config;
-//< See if we can just assign the 'Words' to the Client itself
+//< Parse all the words into memory at start up
 client.words = words;
+//< Instantiate the 'Recommendation' Enmap
+client.recommended = new Enmap({name: "recommended"});
 
 //< Iterate through all the '{events}.js' files and add 'em
 fs.readdir("./events/", (err, files) => {
